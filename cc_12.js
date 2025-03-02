@@ -40,3 +40,16 @@ function addProductItem(productName) {
 
     inventoryList.appendChild(newProductItem);
 };
+
+function removeProductItem(item) {
+    const inventoryList = document.getElementById("inventoryList");
+    inventoryList.removeChild(item);
+}; //Remove product item
+
+document.getElementById("addProductButton").addEventListener("click", () => {
+  addProductItem("New Product");
+});
+
+//Example product items
+addProductItem("Milk");
+addProductItem("Paper");
