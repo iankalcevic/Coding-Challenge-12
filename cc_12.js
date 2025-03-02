@@ -14,3 +14,12 @@ revenueCard.innerHTML = '
 '; //Populate the card
 
 dashboardId.appendChild(revenueCard); //Append the card
+
+// Task 2 - Updating Dashboard Metrics
+
+const metricCards = document.querySelectorAll("metric-card");
+
+metricCardsArray.forEach(card => {
+    card.innerText += ' - Updated'; //Updated card text
+    card.style.backgroundColor = 'orange'; //Add background color
+}); //Update each cards inner text
