@@ -23,3 +23,20 @@ metricCardsArray.forEach(card => {
     card.innerText += ' - Updated'; //Updated card text
     card.style.backgroundColor = 'orange'; //Add background color
 }); //Update each cards inner text
+
+// Task 3 - Dynamic Inventory Management
+
+function addProductItem(productName) {
+    const inventoryList = document.getElementById("inventoryList");
+    const newProductItem = document.createElement("li");
+
+    newProductItem.setAttribute("class", "product-item");
+    newProductItem.setAttribute("data-product", productName);
+    newProductItem.innertext = productName;
+
+    newProductItem.addEventListener("click", () => {
+        removeProductItem(newProductItem);
+    }); //Click event that removes items
+
+    inventoryList.appendChild(newProductItem);
+};
